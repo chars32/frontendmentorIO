@@ -95,7 +95,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* position: relative; */
 }
 
 .share-button figure {
@@ -114,6 +113,10 @@ body {
 }
 
 .button_message {
+  display: none;
+}
+
+.button_message_show {
   display: flex;
   justify-content: space-evenly;
   width: 20%;
@@ -150,6 +153,9 @@ body {
   width: 10%;
 }
 
+.change-color {
+  background-color: var(--title-txt-color) !important;
+}
 /* .attribution {
   font-size: 11px;
   text-align: center;
