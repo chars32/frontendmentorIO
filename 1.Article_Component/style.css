@@ -117,7 +117,7 @@ body {
 }
 
 .button_message_show {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   width: 20%;
   align-items: center;
@@ -130,12 +130,7 @@ body {
   bottom: 43%;
 }
 
-.button_message p {
-  letter-spacing: 4px;
-  font-size: 0.9rem;
-}
-
-.button_message::after {
+.button_message_show::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -155,6 +150,50 @@ body {
 
 .change-color {
   background-color: var(--title-txt-color) !important;
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+    /* display: none; */
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /* .attribution {
   font-size: 11px;
