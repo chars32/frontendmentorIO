@@ -1,0 +1,31 @@
+/* @import "desktop.css"; */
+@import "mobile.css";
+
+:root {
+  --title-txt-color: hsl(217, 19%, 35%);
+  --body-txt-color: hsl(214, 17%, 51%);
+  --body-txttwo-color: hsl(212, 23%, 69%);
+  --background-color: hsl(210, 46%, 95%);
+}
+
+body,
+p,
+h2,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
