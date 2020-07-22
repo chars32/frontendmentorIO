@@ -2,20 +2,21 @@
   background-color: var(--background-color);
   height: 100vh;
   width: 100vw;
-  display: grid;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  position: relative;
 }
 
 .post-container {
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
+  width: 70%;
+  height: 70%;
   display: grid;
   grid-template-rows: 40% 60%;
-  width: 80%;
-  height: 80%;
+  background-color: white;
+
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .cover-container img {
@@ -24,68 +25,65 @@
 }
 
 .text-container {
+  border-radius: 15px;
   display: grid;
-  grid-auto-rows: 35% 35% 30%;
-  padding: 10% 8%;
+  grid-auto-rows: 30% 45% 25%;
+  padding: 5% 8%;
   align-items: center;
 }
 
 .text-container h2 {
-  font-size: 0.99rem;
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .text-container p {
-  font-size: 0.79rem;
+  font-size: 0.78rem;
+}
+
+.button_message_show {
+  display: none;
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 70% 30%;
   align-self: flex-end;
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
 
 .user {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
   align-items: center;
 }
 
 .user figure {
-  width: 30%;
+  display: grid;
+  width: 100%;
 }
 
 .user figure img {
-  width: 75%;
   border-radius: 50%;
+  width: 100%;
 }
 
 .user-info {
-  font-size: 0.8rem;
+  padding-left: 5%;
 }
 
 .share-button {
-  display: flex;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  justify-content: flex-end;
 }
 
 .share-button figure {
-  width: 50%;
-  background-color: var(--background-color);
+  height: 80%;
+  background: var(--title-txt-color);
   border-radius: 50%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
+  width: 70%;
+  display: grid;
   align-items: center;
+  justify-items: center;
 }
-
-/* .button_message_show {
-  background-color: red;
-  display: flex;
-  position: absolute;
-  bottom: 10%;
-  width: 80%;
-  height: 11%;
-  border-radius: 0 0 15px 15px;
-  align-items: center;
-  justify-content: space-evenly;
-} */

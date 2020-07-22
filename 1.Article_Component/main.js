@@ -6,7 +6,16 @@ const arrowShare = shareButton.getElementsByTagName("img")[0];
 
 const buttonMessage = document.getElementsByClassName("button_message_show")[0];
 
+const textContainer = document.getElementsByClassName("text-container")[0];
+
 let toggleButton = false;
+
+// MOBILE
+document.addEventListener("click", () => {
+  if (event.target == textContainer) {
+    console.log("iguales");
+  }
+});
 
 // DESKTOP
 // shareButton.addEventListener("click", () => {
