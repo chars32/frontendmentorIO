@@ -43,7 +43,25 @@
 }
 
 .button_message_show {
-  display: none;
+  border-radius: 0 0 15px 15px;
+  width: 70%;
+  position: absolute;
+  bottom: 100px;
+  background: var(--title-txt-color);
+  height: 9%;
+}
+
+.buttons_container {  
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 0 8%;
+}
+
+.buttons_container {
+  color: var(--body-txttwo-color)
 }
 
 .footer {
@@ -80,10 +98,32 @@
 
 .share-button figure {
   height: 80%;
-  background: var(--title-txt-color);
+  background: var(--background-color);
   border-radius: 50%;
   width: 70%;
   display: grid;
   align-items: center;
   justify-items: center;
 }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+} 
