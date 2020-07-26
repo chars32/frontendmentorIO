@@ -1,5 +1,7 @@
 /* @import "desktop.css"; */
-@import "mobile.css";
+@media only screen and (max-width: 375px) {
+  @import "mobile.css";
+}
 
 :root {
   --title-txt-color: hsl(217, 19%, 35%);
@@ -29,3 +31,322 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 } */
+
+@media only screen and (max-width: 375px) {
+  .main-container {
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-container {
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    background-color: white;
+
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .cover-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-container {
+    border-radius: 15px;
+    display: grid;
+    grid-auto-rows: 30% 45% 25%;
+    padding: 5% 8%;
+    align-items: center;
+  }
+
+  .text-container h2 {
+    align-self: flex-end;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .text-container p {
+    font-size: 0.78rem;
+  }
+
+  .button_message_show {
+    border-radius: 0 0 15px 15px;
+    width: 70%;
+    position: absolute;
+    bottom: 120px;
+    background: var(--title-txt-color);
+    height: 9%;
+  }
+
+  .buttons_container {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 0 8%;
+  }
+
+  .buttons_container {
+    color: var(--body-txttwo-color);
+  }
+
+  .footer {
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+
+  .user {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+  }
+
+  .user figure {
+    display: grid;
+    width: 100%;
+  }
+
+  .user figure img {
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  .user-info {
+    padding-left: 5%;
+  }
+
+  .share-button {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .share-button figure {
+    height: 80%;
+    background: var(--background-color);
+    border-radius: 50%;
+    width: 70%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .post-container {
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width: 70%;
+    height: 40%;
+    overflow: hidden;
+  }
+
+  .post-container img {
+    width: 120%;
+    height: 110%;
+  }
+
+  .text-container {
+    align-items: center;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 45% 35% 20%;
+    padding: 5% 10%;
+  }
+
+  .text-container h2 {
+    color: var(--title-txt-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  .post-container .text-container p {
+    font-size: 1rem;
+    color: var(--body-txt-color);
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 85% 15%;
+  }
+
+  .user {
+    display: grid;
+    grid-template-columns: 15% 85%;
+  }
+
+  .user figure {
+    justify-self: start;
+    width: 75%;
+  }
+
+  .user figure img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .user-info {
+    display: grid;
+    align-items: center;
+  }
+
+  .user-info p {
+    color: var(--title-txt-color) !important;
+    font-weight: bold;
+  }
+
+  .share-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .share-button figure {
+    width: 65%;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .share-button figure img {
+    width: 45%;
+    height: 46%;
+  }
+
+  .button_message {
+    display: none;
+  }
+
+  .button_message_show {
+    display: none;
+    justify-content: space-evenly;
+    width: 20%;
+    align-items: center;
+    padding: 1.5%;
+    border-radius: 10px;
+    position: absolute;
+    background-color: var(--title-txt-color);
+    color: var(--body-txttwo-color);
+    left: 67%;
+    bottom: 43%;
+  }
+
+  .button_message_show::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: var(--title-txt-color);
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -15px;
+  }
+
+  .buttons_container {
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+  }
+
+  .button_message img {
+    width: 10%;
+  }
+
+  .change-color {
+    background-color: var(--title-txt-color) !important;
+  }
+
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .zoomOut {
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+      /* display: none; */
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}

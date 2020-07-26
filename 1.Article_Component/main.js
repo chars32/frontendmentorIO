@@ -11,29 +11,34 @@
 let toggleButton = false;
 
 // MOBILE
-const buttonMessageShow = document.querySelector('.button_message_show');
+const buttonMessageShow = document.querySelector(".button_message_show");
 
-const arrowShareButton = document.querySelector('.share-button').querySelector('figure').querySelector('img')
+const arrowShareButton = document
+  .querySelector(".share-button")
+  .querySelector("figure")
+  .querySelector("img");
 
-const arrowShareFigure = document.querySelector('.share-button').querySelector('figure')
+const arrowShareFigure = document
+  .querySelector(".share-button")
+  .querySelector("figure");
 
 buttonMessageShow.style.display = "none";
 
-document.addEventListener('click', () => {
-  if(event.target == arrowShareButton){
-    toggleButton = !toggleButton
+document.addEventListener("click", () => {
+  if (event.target == arrowShareButton) {
+    toggleButton = !toggleButton;
 
-    if (toggleButton == true){
-      buttonMessageShow.style.display = 'flex';
-      arrowShareFigure.style.zIndex = '99';
-      arrowShareFigure.style.backgroundColor = 'var(--body-txttwo-color)'
-      arrowShareButton.setAttribute("src", "./images/icon-share-change.svg")
-    }else if(toggleButton == false) {
-      buttonMessageShow.style.display = 'none';
-      arrowShareButton.setAttribute("src", "./images/icon-share.svg")
+    if (toggleButton == true) {
+      buttonMessageShow.style.display = "flex";
+      arrowShareFigure.style.zIndex = "99";
+      arrowShareFigure.style.backgroundColor = "var(--body-txttwo-color)";
+      arrowShareButton.setAttribute("src", "./images/icon-share-change.svg");
+    } else if (toggleButton == false) {
+      buttonMessageShow.style.display = "none";
+      arrowShareButton.setAttribute("src", "./images/icon-share.svg");
     }
-  } 
-})
+  }
+});
 
 // DESKTOP
 // shareButton.addEventListener("click", () => {
